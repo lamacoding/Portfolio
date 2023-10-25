@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lama.coding</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -41,20 +42,20 @@
       <div class="collapse navbar-collapse me-4" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto ps-4">
           <li class="nav-item">
-            <a class="nav-link px-4" href="index.html">Home</a>
+            <a class="nav-link mx-4" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link px-4" href="#">About</a>
+            <a class="nav-link mx-4" href="#">About</a>
           </li>
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              class="nav-link dropdown-toggle mx-4"
               href="#"
               data-bs-toggle="dropdown"
               px-4
               >Projects</a
             >
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu mb-3">
               <li><span class="dropdown-header">Web</span></li>
               <li><a class="dropdown-item" href="#">lama.project</a></li>
               <li>
@@ -69,7 +70,13 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="ms-5 btn btn-light" href="#">Contact me</a>
+            <button
+              class="btn btn-light mx-4"
+              data-bs-toggle="modal"
+              data-bs-target="#contact-modal"
+            >
+              Contact me
+            </button>
           </li>
         </ul>
 
@@ -88,6 +95,74 @@
       </div>
     </nav>
 
+    <!-- contact modal start -->
+    <div
+      class="modal fade"
+      id="contact-modal"
+      tabindex="-1"
+      aria-labelledby="contact-modal-label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="contact-modal-label">
+              New message
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <form class="d-flex flex-column needs-validation" novalidate>
+            <div class="modal-body">
+              <label class="form-label" for="contact-name">Name *</label>
+              <input
+                class="form-control"
+                type="text"
+                maxlength="50"
+                id="contact-name"
+                required
+              />
+              <div class="invalid-feedback">Please enter your name.</div>
+              <label class="form-label mt-3" for="contact-mail">Mail *</label>
+              <input
+                class="form-control"
+                type="email"
+                id="contact-mail"
+                required
+              />
+              <div class="invalid-feedback">Please enter a valid mail address.</div>
+              <div class="form-text">Your mail address will never be shared.</div>
+              <label class="form-label mt-3" for="contact-message"
+                >Message *</label
+              >
+              <textarea
+                class="form-control"
+                id="contact-message"
+                required
+              ></textarea>
+              <div class="invalid-feedback mb-3">Please enter a message.</div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-link me-4"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Send message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- contact modal end -->
+
     <div class="container mt-5 text-center">
       <h1>Hello there. I'm <span id="heading-name">Matthias</span>.</h1>
       <br />
@@ -102,5 +177,30 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
   </body>
 </html>
