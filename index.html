@@ -113,9 +113,14 @@
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
+              id="close-modal"
             ></button>
           </div>
-          <form class="d-flex flex-column needs-validation" novalidate>
+          <form
+            class="d-flex flex-column needs-validation"
+            id="contact-form"
+            novalidate
+          >
             <div class="modal-body">
               <label class="form-label" for="contact-name">Name *</label>
               <input
@@ -133,8 +138,12 @@
                 id="contact-mail"
                 required
               />
-              <div class="invalid-feedback">Please enter a valid mail address.</div>
-              <div class="form-text">Your mail address will never be shared.</div>
+              <div class="invalid-feedback">
+                Please enter a valid mail address.
+              </div>
+              <div class="form-text">
+                Your mail address will never be shared.
+              </div>
               <label class="form-label mt-3" for="contact-message"
                 >Message *</label
               >
@@ -184,6 +193,7 @@
 
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
         const forms = document.querySelectorAll(".needs-validation");
+        const closeModal = document.getElementById("close-modal");
 
         // Loop over them and prevent submission
         Array.from(forms).forEach((form) => {
@@ -196,6 +206,12 @@
               }
 
               form.classList.add("was-validated");
+              /*
+              if (form.valid()) {
+                closeModal.click();
+                form.classList.remove("was-validated");
+                form.reset();
+              }*/
             },
             false
           );
