@@ -14,6 +14,24 @@
   .navbar-brand:focus {
     color: white;
   }
+
+  .bg-blurred {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background: rgb(0, 182, 179);
+    background: linear-gradient(
+      120deg,
+      rgba(0, 182, 179, 0.45) 0%,
+      rgba(0, 70, 68, 0.45) 30%,
+      rgba(56, 0, 94, 0.45) 70%,
+      rgba(109, 0, 182, 0.45) 100%
+    );
+    z-index: -1;
+    border-radius: 50px;
+    filter: blur(50px);
+  }
 }
 
 [data-bs-theme="light"] {
@@ -28,6 +46,24 @@
   .navbar-brand:focus {
     color: rgb(11, 11, 11);
   }
+
+  .bg-blurred {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background: rgb(0, 182, 179);
+    background: linear-gradient(
+      120deg,
+      rgba(0, 182, 179, 0.45) 0%,
+      rgba(138, 255, 253, 0.45) 30%,
+      rgba(208, 154, 245, 0.45) 70%,
+      rgba(109, 0, 182, 0.45) 100%
+    );
+    z-index: -1;
+    border-radius: 50px;
+    filter: blur(50px);
+  }
 }
 
 .wrapper {
@@ -39,30 +75,6 @@
 .collapse.show {
   background-color: var(--bs-body-bg);
   transition: background-color 0.4s;
-}
-
-.bg-top-left {
-  position: fixed;
-  width: 50%;
-  height: 300px;
-  top: 0;
-  left: -40px;
-  background-color: rgba(0, 182, 179, 0.45);
-  z-index: -1;
-  border-radius: 50px;
-  filter: blur(150px);
-}
-
-.bg-top-right {
-  position: fixed;
-  width: 50%;
-  height: 300px;
-  top: 0;
-  right: -40px;
-  background-color: rgba(109, 0, 182, 0.45);
-  z-index: -1;
-  border-radius: 50px;
-  filter: blur(150px);
 }
 
 .btn-primary {
@@ -77,7 +89,8 @@
   filter: brightness(95%);
 }
 
-.btn-primary:active, .btn-primary:focus {
+.btn-primary:active,
+.btn-primary:focus {
   background-color: rgb(0, 182, 180);
   border-color: rgb(0, 182, 180);
   filter: brightness(90%);
@@ -102,10 +115,10 @@ body {
 }
 
 #heading-name {
-  background: rgb(109, 0, 182);
+  background: rgb(199, 4, 157);
   background: linear-gradient(
     129deg,
-    rgba(109, 0, 182, 1) 0%,
+    rgb(199, 4, 157) 0%,
     rgba(0, 182, 180, 1) 100%
   );
   background-clip: text;
@@ -113,11 +126,17 @@ body {
   color: transparent;
 }
 
-h1 {
-  font-weight: bold;
-}
-
 .heading-emphasize {
   color: rgb(0, 182, 180);
   font-weight: bold;
+}
+
+#portrait {
+  width: 80%;
+  filter: drop-shadow(0px 0px 15px rgb(134, 134, 134));
+  border-radius: 100px;
+}
+
+.rotated {
+  transform: rotate(-90deg);
 }
