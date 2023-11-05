@@ -66,10 +66,12 @@
   }
 }
 
-.wrapper {
-  position: fixed;
-  top: 70px;
-  width: 100%;
+.navbar {
+  transition: background-color .3s;
+}
+
+.collapse {
+  margin-top: 10px;
 }
 
 .collapse.show {
@@ -132,11 +134,9 @@ body {
 }
 
 #portrait {
-  width: 80%;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
   filter: drop-shadow(0px 0px 15px rgb(134, 134, 134));
   border-radius: 100px;
-}
-
-.rotated {
-  transform: rotate(-90deg);
 }
