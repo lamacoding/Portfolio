@@ -22,80 +22,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="background.css" />
-    <script src="colormode.js" type="module"></script>
-    <script src="navbar.js" type="module"></script>
+    <script src="js/navbar.js" type="module"></script>
+    <script src="js/formValidation.js" type="module"></script>
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md fixed-top bg-transparent mb-0">
-      <a class="navbar-brand mx-4" href="#">lama.coding</a>
-      <button
-        class="navbar-toggler me-4"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon pe-4"></span>
-      </button>
-      <div class="collapse navbar-collapse me-4" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto ps-4">
-          <li class="nav-item">
-            <a class="nav-link mx-4" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-4" href="#">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle mx-4"
-              href="#"
-              data-bs-toggle="dropdown"
-              px-4
-              >Projects</a
-            >
-            <ul class="dropdown-menu mb-3">
-              <li><span class="dropdown-header">Web</span></li>
-              <li><a class="dropdown-item" href="#">lama.project</a></li>
-              <li>
-                <a class="dropdown-item" href="#"
-                  >lama.project Marketing Site</a
-                >
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li><span class="dropdown-header">Java</span></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <button
-              class="btn btn-light mx-4"
-              data-bs-toggle="modal"
-              data-bs-target="#contact-modal"
-            >
-              Contact me
-            </button>
-          </li>
-        </ul>
-
-        <div class="d-flex my-2 mx-4">
-          <span class="material-symbols-rounded me-2">dark_mode</span>
-          <span class="form-switch form-check mx-2">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              role="switch"
-              id="switch-color-mode"
-            />
-          </span>
-          <span class="material-symbols-rounded">light_mode</span>
-        </div>
-      </div>
-    </nav>
+    <div id="nav-placeholder"></div>
 
     <div class="bg-blurred"></div>
 
@@ -195,25 +127,34 @@
             alt="Portrait of the web developer"
           />
         </div>
-        <div class="col-md-4 pt-lg-5 d-flex flex-column justify-content-center">
+        <div class="col-md-4 py-4 d-flex flex-column justify-content-center">
           <h1 class="px-0 mb-4">about.</h1>
           <p class="px-4">
             Currently working in the IT department of an industry company, I'm
             on a journey to transform my passion for web development into a
-            thriving career.</p>
-            <p class="px-4">With a strong interest in game development, I'm
-            ready to explore the endless possibilities of the digital world.</p>
-            <p class="px-4 lead">Join me on this exciting adventure!
+            thriving career.
           </p>
+          <p class="px-4">
+            With a strong interest in game development, I'm ready to explore the
+            endless possibilities of the digital world.
+          </p>
+          <p class="px-4 lead">Join me on this exciting adventure!</p>
         </div>
         <div class="col"></div>
       </div>
 
       <div class="row gx-5 bg-transparent mt-5">
         <div class="col-md-3"></div>
-        <div class="col-md-4 d-flex flex-column justify-content-center ">
+        <div class="col-md-4 d-flex flex-column justify-content-center">
           <h1 class="px-0 mb-4">facts.</h1>
-          <p class="px-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A laborum dignissimos sunt eveniet tempore quia aliquid ipsum vitae, culpa eligendi perferendis veritatis at provident fugiat, quis inventore, aperiam sapiente delectus doloribus? Dolore aperiam esse cum ipsum? Ad ab ipsam quia deleniti iste quos, nihil eveniet alias ipsum ullam accusamus architecto.</p>
+          <p class="px-4">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. A laborum
+            dignissimos sunt eveniet tempore quia aliquid ipsum vitae, culpa
+            eligendi perferendis veritatis at provident fugiat, quis inventore,
+            aperiam sapiente delectus doloribus? Dolore aperiam esse cum ipsum?
+            Ad ab ipsam quia deleniti iste quos, nihil eveniet alias ipsum ullam
+            accusamus architecto.
+          </p>
         </div>
       </div>
     </div>
@@ -223,37 +164,5 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script>
-      // Disabling form submissions if there are invalid fields
-      (() => {
-        "use strict";
-
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        const forms = document.querySelectorAll(".needs-validation");
-        const closeModal = document.getElementById("close-modal");
-
-        // Loop over them and prevent submission
-        Array.from(forms).forEach((form) => {
-          form.addEventListener(
-            "submit",
-            (event) => {
-              if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-
-              form.classList.add("was-validated");
-              /*
-              if (form.valid()) {
-                closeModal.click();
-                form.classList.remove("was-validated");
-                form.reset();
-              }*/
-            },
-            false
-          );
-        });
-      })();
-    </script>
   </body>
 </html>

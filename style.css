@@ -66,12 +66,10 @@
   }
 }
 
-.navbar {
-  transition: background-color .3s;
-}
-
-.collapse {
-  margin-top: 10px;
+.wrapper {
+  position: fixed;
+  top: 70px;
+  width: 100%;
 }
 
 .collapse.show {
@@ -112,6 +110,10 @@ nav .material-symbols-rounded {
   color: var(--bs-text);
 }
 
+nav {
+  transition: background-color 0.3s;
+}
+
 body {
   padding-top: 150px;
 }
@@ -134,9 +136,8 @@ body {
 }
 
 #portrait {
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-  filter: drop-shadow(0px 0px 15px rgb(134, 134, 134));
-  border-radius: 100px;
+  width: 80%;
+  margin: auto;
+  filter: drop-shadow(0px 0px 10px rgb(134, 134, 134));
+  border-radius: 20px;
 }
