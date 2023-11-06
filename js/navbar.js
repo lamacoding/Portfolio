@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((navHTML) => {
       navPlaceholder.innerHTML = navHTML;
 
-      toggleColor();
+      toggleColorMode();
       window.addEventListener("scroll", navbarColorOnScroll);
     })
     .catch((error) => {
@@ -26,7 +26,7 @@ function navbarColorOnScroll() {
   }
 }
 
-function toggleColor() {
+function toggleColorMode() {
   const toggleColorModeEl = document.getElementById("switch-color-mode");
   const HtmlEl = document.getElementsByTagName("html")[0];
 
