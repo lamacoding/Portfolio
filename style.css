@@ -5,7 +5,7 @@
 
 [data-bs-theme="dark"] {
   --bs-text: white;
-  --bg-div-between: darkslateblue;
+  --bg-div-between: #483d8b;
 
   .navbar-brand,
   .nav-link {
@@ -38,7 +38,7 @@
 [data-bs-theme="light"] {
   --bs-body-bg: rgb(248, 248, 255);
   --bs-text: black;
-  --bg-div-between: rgb(166, 103, 224);
+  --bg-div-between: #a667e0;
 
   .navbar-brand,
   .nav-link {
