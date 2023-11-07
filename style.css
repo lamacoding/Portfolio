@@ -38,7 +38,7 @@
 [data-bs-theme="light"] {
   --bs-body-bg: rgb(248, 248, 255);
   --bs-text: black;
-  --bg-div-between: #a667e0;
+  --bg-div-between: #72c0e1;
 
   .navbar-brand,
   .nav-link {
@@ -114,6 +114,36 @@ body {
   padding-top: 100px;
 }
 
+#socials {
+  height: 30px;
+  gap: 30px;
+}
+
+#socials img {
+  height: 90%;
+}
+
+#socials img:not(:hover) {
+  filter: brightness(1.);
+  transform: scale(1.) rotate(0deg);
+  transition: all .4s;
+}
+
+#socials img:hover {
+  filter: brightness(1.5);
+  transform: scale(1.2) rotate(10deg);
+  transition: all .4s;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.sub-heading {
+  font-size: 2em;
+}
+
 #heading-name {
   background: rgb(199, 4, 157);
   background: linear-gradient(
@@ -136,6 +166,15 @@ body {
   margin: auto;
   filter: drop-shadow(0px 0px 10px rgb(134, 134, 134));
   border-radius: 20px;
+}
+
+@media (min-width: 1200px) {
+  .rotated-div {
+    transform: rotate(3deg);
+  }
+  .rotated-div-l {
+    transform: rotate(-3deg);
+  }
 }
 
 .bg-div-between {
