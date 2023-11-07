@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function navbarColorOnScroll() {
   const navbar = document.querySelector(".navbar");
-  if (window.scrollY > 100) {
+  if (window.scrollY > 40) {
     navbar.classList.add("bg-body");
     navbar.classList.remove("bg-transparent");
   } else {
