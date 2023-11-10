@@ -67,12 +67,12 @@
     filter: blur(50px);
   }
 }
-
+/*
 .collapse.show {
   background-color: var(--bs-body-bg);
   transition: background-color 0.4s;
 }
-
+*/
 .btn-primary {
   background-color: rgb(0, 182, 180);
   border-color: rgb(0, 182, 180);
@@ -116,11 +116,13 @@ body {
 
 #socials {
   height: 30px;
+  width: 100px;
   gap: 30px;
 }
 
 #socials img {
-  height: 90%;
+  height: 20px;
+  width: 20px;
 }
 
 #socials img:not(:hover) {
