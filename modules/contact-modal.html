@@ -1,0 +1,59 @@
+<div
+  class="modal fade"
+  id="contact-modal"
+  tabindex="-1"
+  aria-labelledby="contact-modal-label"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="contact-modal-label">New message</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          id="close-modal"
+        ></button>
+      </div>
+      <form
+        class="d-flex flex-column needs-validation"
+        id="contact-form"
+        novalidate
+      >
+        <div class="modal-body">
+          <label class="form-label" for="contact-name">Name *</label>
+          <input
+            class="form-control"
+            type="text"
+            maxlength="50"
+            id="contact-name"
+            required
+          />
+          <div class="invalid-feedback">Please enter your name.</div>
+          <label class="form-label mt-3" for="contact-mail">Mail *</label>
+          <input class="form-control" type="email" id="contact-mail" required />
+          <div class="invalid-feedback">Please enter a valid mail address.</div>
+          <div class="form-text">Your mail address will never be shared.</div>
+          <label class="form-label mt-3" for="contact-message">Message *</label>
+          <textarea
+            class="form-control"
+            id="contact-message"
+            required
+          ></textarea>
+          <div class="invalid-feedback mb-3">Please enter a message.</div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-link me-4"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary">Send message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

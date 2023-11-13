@@ -2,6 +2,10 @@
   font-variation-settings: "FILL" 1, "wght" 200, "GRAD" 0, "opsz" 24;
   cursor: default;
 }
+.btn .material-symbols-rounded {
+    vertical-align: bottom;
+    cursor: pointer;
+}
 
 [data-bs-theme="dark"] {
   --bs-text: white;
@@ -127,13 +131,13 @@ body {
 
 #socials img:not(:hover) {
   filter: brightness(1.);
-  transform: scale(1.) rotate(0deg);
+  transform: scale(1.2) rotate(0deg);
   transition: all .4s;
 }
 
 #socials img:hover {
   filter: brightness(1.5);
-  transform: scale(1.2) rotate(10deg);
+  transform: scale(1.5) rotate(15deg);
   transition: all .4s;
 }
 
@@ -172,10 +176,7 @@ h1 {
 
 @media (min-width: 1200px) {
   .rotated-div {
-    transform: rotate(3deg);
-  }
-  .rotated-div-l {
-    transform: rotate(-3deg);
+    transform: rotate(-2deg);
   }
 }
 
