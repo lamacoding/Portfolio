@@ -9,13 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       toggleColorMode();
       setNavbarToggler();
-      window.addEventListener("scroll", navbarColorOnScroll);
     })
     .catch((error) => {
       console.error("Error loading navigation menu:", error);
     });
 });
-
+/*
 function navbarColorOnScroll() {
   const navbar = document.querySelector(".navbar");
   if (window.scrollY > 40) {
@@ -26,7 +25,7 @@ function navbarColorOnScroll() {
     navbar.classList.add("bg-transparent");
   }
 }
-
+*/
 function toggleColorMode() {
   const toggleColorModeEl = document.getElementById("switch-color-mode");
   const HtmlEl = document.getElementsByTagName("html")[0];

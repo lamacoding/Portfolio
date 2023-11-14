@@ -78,22 +78,37 @@
 }
 */
 .btn-primary {
-  background-color: rgb(0, 182, 180);
-  border-color: rgb(0, 182, 180);
+  background-color: rgb(137, 4, 214);
+  border-color: rgb(137, 4, 214);
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: rgb(0, 182, 180) !important;
-  border-color: rgb(0, 182, 180) !important;
-  filter: brightness(95%);
+  background-color: rgb(122, 1, 192) !important;
+  border-color: rgb(122, 1, 192) !important;
 }
 
 .btn-primary:active,
 .btn-primary:focus {
-  background-color: rgb(0, 182, 180);
-  border-color: rgb(0, 182, 180);
+  background-color: rgb(122, 1, 192);
+  border-color: rgb(122, 1, 192);
   filter: brightness(90%);
+}
+
+nav {
+  width: 60%;
+  border-radius: 10px;
+  top: 20px;
+  position: fixed !important;
+  z-index: 1;
+}
+
+@media (max-width: 576px) {
+  nav {
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+  }
 }
 
 .nav-link:hover,
@@ -110,8 +125,9 @@ nav .material-symbols-rounded {
   color: var(--bs-text);
 }
 
-nav {
-  transition: background-color 0.3s;
+#nav-placeholder {
+  display: flex;
+  justify-content: center;
 }
 
 /*body {
@@ -144,17 +160,29 @@ nav {
 #top-div {
   background-image: url(assets/mj_top_main.png);
   background-size: cover;
-  background-position-y:-456px;
   background-repeat: no-repeat;
-  height: 80vh;
+  background-attachment: fixed;
+  height: 100vh;
+  padding-top: 110px;
+}
+
+@media (max-width: 1700px) {
+  #top-div {
+    background-image: none;
+    background-color: rgb(11, 15, 19) !important;
+    height: auto;
+    padding-bottom: 40px;
+  }
 }
 
 h1 {
+  color: white;
   font-weight: bold;
   font-size: 3em;
 }
 
 .sub-heading {
+  color: white;
   font-size: 2em;
 }
 
@@ -181,11 +209,16 @@ h1 {
   filter: drop-shadow(0px 0px 20px rgb(144, 74, 172));
   transform: rotateY(180deg);
   border-radius: 20px;
+  animation: moveUpDown 4s infinite ease-in-out;
 }
 
-@media (min-width: 1200px) {
-  .rotated-div {
-    transform: rotate(0deg);
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
   }
 }
 
@@ -193,3 +226,21 @@ h1 {
   /*background-color: var(--bg-div-between);*/
   background-color: transparent;
 }
+
+#techstack img {
+  width: 50%;
+}
+
+#techstack div {
+    text-align: center;
+}
+
+#techstack div:hover {
+  transform: translateY(-10px);
+  transition: all 0.6s;
+}
+
+#techstack div:not(:hover) {
+    transform: translateY(10px);
+    transition: all 0.6s;
+  }

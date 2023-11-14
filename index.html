@@ -26,7 +26,7 @@
     <script src="js/formValidation.js" type="module"></script>
   </head>
 
-  <body>
+  <body id="top">
     <div id="nav-placeholder"></div>
     <div class="bg-blurred"></div>
 
@@ -107,16 +107,17 @@
     </div>
     <!-- contact modal end -->
 
-    <div class="mt-0 py-5 text-center" id="top-div">
+    <div class="mt-0 text-center" id="top-div">
       <h1>Hello there. I'm <span id="heading-name">Matthias</span>.</h1>
       <br />
       <p class="lead sub-heading">
         A web developer to craft
         <span class="heading-emphasize">your</span> digital experiences.
       </p>
+      <a href="#sectionabout" class="btn btn-light mt-4">Learn more</a>
     </div>
     <div class="container-fluid bg-transparent mt-0">
-      <div class="row gx-5 mt-0 py-5 bg-div-between rotated-div">
+      <div class="row gx-5 mt-0 py-5 bg-div-between" id="sectionabout">
         <div class="col-xl-3"></div>
         <div class="col-xl-3 d-flex align-items-center">
           <img
@@ -159,27 +160,21 @@
             Never satisfied with design - there's always room for improvement
           </p>
         </div>
-        <div class="col-xl-3 d-flex flex-column justify-content-center">
-          <h2 class="px-2 mb-4">Tech stack.</h2>
-          <b>Web</b>
-          <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-          </ul>
-          <b>Databases</b>
-          <ul>
-            <li>mySQL</li>
-            <li>Oracle DB</li>
-            <li>Microsoft SQL Server</li>
-          </ul>
-          <b>OOP</b>
-          <ul>
-            <li>Java</li>
-            <li>C#</li>
-          </ul>
-        </div>
       </div>
+    </div>
+
+    <div class="row bg-transparent my-5 text-center" id="techstack">
+        <h2 class="px-2 mb-4">Tech stack.</h2>
+        <div class="col-xl-2"></div>
+        <div class="col-xl-1"><img src="assets/stack/html.png"></div>
+        <div class="col-xl-1"><img src="assets/stack/css.png"></div>
+        <div class="col-xl-1"><img src="assets/stack/js.png"></div>
+        <div class="col-xl-1"><img src="assets/stack/nodejs.png"></div>
+        <div class="col-xl-1"><img src="assets/stack/react.png"></div>
+        <div class="col-xl-1"><img src="assets/stack/cs.png"></div>
+        <div class="col-xl-1"><img src="assets/stack/java.png"></div>
+        <div class="col-xl-1"><img src="assets/stack/sql.png"></div>
+        <div class="col-xl-2"></div>
     </div>
 
     <script
