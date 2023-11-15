@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
       navPlaceholder.innerHTML = navHTML;
 
       toggleColorMode();
-      setNavbarToggler();
     })
     .catch((error) => {
       console.error("Error loading navigation menu:", error);
@@ -61,23 +60,6 @@ function toggleColorMode() {
       btnMyWork.classList.remove("btn-outline-dark");
       btnMyWork.classList.add("btn-outline-light");
       localStorage.setItem("colorMode", "dark");
-    }
-  });
-}
-
-function setNavbarToggler() {
-  const navbarToggler = document.getElementById("navbar-toggler");
-
-  navbarToggler.addEventListener("click", function () {
-    const navbar = document.querySelector(".navbar");
-    if (window.scrollY <= 40) {
-      if (navbar.classList.contains("bg-transparent")) {
-        navbar.classList.add("bg-body");
-        navbar.classList.remove("bg-transparent");
-      } else {
-        navbar.classList.add("bg-transparent");
-        navbar.classList.remove("bg-body");
-      }
     }
   });
 }
