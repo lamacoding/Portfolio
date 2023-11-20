@@ -50,11 +50,16 @@
 }
 
 nav {
+  background-color: rgb(122, 1, 192);
   width: 60%;
   border-radius: 15px;
   top: 20px;
   position: fixed !important;
   z-index: 1;
+}
+
+#nav-spacer {
+    width: 150px;
 }
 
 @media (max-width: 576px) {
@@ -82,13 +87,6 @@ nav .material-symbols-rounded {
 #nav-placeholder {
   display: flex;
   justify-content: center;
-}
-
-body {
-  background-image: url(assets/bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 #socials {
@@ -183,20 +181,21 @@ h1 {
   background-color: transparent;
 }
 
+#techstack {
+  height: 100px;
+}
+
 #techstack img {
-  width: 50%;
+  width: 50px;
+  height: 50px;
 }
 
-#techstack div {
-  text-align: center;
-}
-
-#techstack div:hover {
+#techstack img:hover {
   transform: translateY(-10px);
   transition: all 0.6s;
 }
 
-#techstack div:not(:hover) {
+#techstack img:not(:hover) {
   transform: translateY(10px);
   transition: all 0.6s;
 }
