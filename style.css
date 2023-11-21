@@ -7,28 +7,34 @@
   cursor: pointer;
 }
 
-[data-bs-theme="dark"] {
+:root {
   --bs-text: white;
-  --bg-div-between: #483d8b;
+  --bs-body: rgb(31, 28, 36);
+}
 
-  .navbar-brand,
-  .nav-link {
-    color: white;
-  }
-  .navbar-brand:hover,
-  .navbar-brand:focus {
-    color: white;
-  }
+body {
+  scroll-behavior: smooth;
+  background-color: var(--bs-body);
+  color: var(--bs-text);
+  transition: background-color 1s, color 1s;
+}
 
-  .bg-blurred {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    z-index: -1;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: (3px);
-  }
+section {
+  min-height: 100vh;
+  padding-top: 110px;
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--bs-text);
+}
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: var(--bs-text);
+}
+
+.btn {
+  transition: all 1s;
 }
 
 .btn-primary {
@@ -50,16 +56,15 @@
 }
 
 nav {
-  background-color: rgb(122, 1, 192);
-  width: 60%;
-  border-radius: 15px;
-  top: 20px;
-  position: fixed !important;
+  background-color: var(--bs-body);
+  color: var(--bs-text);
+  width: 100%;
   z-index: 1;
+  transition: all 1s;
 }
 
 #nav-spacer {
-    width: 150px;
+  width: 150px;
 }
 
 @media (max-width: 576px) {
@@ -82,11 +87,6 @@ nav .show {
 
 nav .material-symbols-rounded {
   color: var(--bs-text);
-}
-
-#nav-placeholder {
-  display: flex;
-  justify-content: center;
 }
 
 #socials {
@@ -116,9 +116,6 @@ nav .material-symbols-rounded {
   background-image: url(assets/mj_top_main.png);
   background-size: cover;
   background-repeat: no-repeat;
-  /*background-attachment: fixed;*/
-  height: 100vh;
-  padding-top: 110px;
 }
 
 @media (max-width: 1700px) {
@@ -132,6 +129,11 @@ nav .material-symbols-rounded {
 
 h1 {
   color: white;
+  font-weight: bold;
+  font-size: 4em;
+}
+
+h2 {
   font-weight: bold;
   font-size: 3em;
 }
@@ -162,7 +164,6 @@ h1 {
   width: 80%;
   margin: auto;
   filter: drop-shadow(0px 0px 20px rgb(144, 74, 172));
-  transform: rotateY(180deg);
   border-radius: 20px;
   animation: moveUpDown 4s infinite ease-in-out;
 }
@@ -170,32 +171,38 @@ h1 {
 @keyframes moveUpDown {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0) rotateY(180deg);
   }
   50% {
-    transform: translateY(10px);
+    transform: translateY(30px) rotateY(180deg);
   }
 }
 
-.bg-div-between {
-  background-color: transparent;
-}
-
-#techstack {
+#techstack-container {
   height: 100px;
 }
 
-#techstack img {
+#techstack-container img {
   width: 50px;
   height: 50px;
 }
 
-#techstack img:hover {
+#techstack-container img:hover {
   transform: translateY(-10px);
   transition: all 0.6s;
 }
 
-#techstack img:not(:hover) {
+#techstack-container img:not(:hover) {
   transform: translateY(10px);
   transition: all 0.6s;
+}
+
+#about p {
+  font-size: 2em;
+}
+
+
+.card img {
+    height: 100px;
+    width: 100px;
 }

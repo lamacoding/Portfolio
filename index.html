@@ -22,13 +22,80 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="js/navbar.js" type="module"></script>
     <script src="js/formValidation.js" type="module"></script>
   </head>
 
   <body id="top">
-    <div id="nav-placeholder"></div>
-    <div class="bg-blurred"></div>
+    <nav class="navbar navbar-expand-xl fixed-top mb-0">
+      <a class="navbar-brand ms-4" href="index.html#top">
+        <img
+          src="assets/lama.png"
+          width="32"
+          height="32"
+          class="me-3"
+          id="brand-logo"
+          alt="Logo"
+        />lama.coding</a
+      >
+      <button
+        class="navbar-toggler me-4"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        id="navbar-toggler"
+      >
+        <span class="navbar-toggler-icon pe-4"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link mx-4" href="index.html#top">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle mx-4"
+              href="#"
+              data-bs-toggle="dropdown"
+              px-4
+              >Projects</a
+            >
+            <ul class="dropdown-menu mb-3">
+              <li><span class="dropdown-header">Fullstack</span></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >lama.project
+                  <span class="material-symbols-rounded fs-6 ms-2"
+                    >open_in_new</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><span class="dropdown-header">Java</span></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <button
+              class="btn btn-light mx-4 my-3 my-xl-0"
+              data-bs-toggle="modal"
+              data-bs-target="#contact-modal"
+              id="btn-contactme"
+            >
+              Contact me
+            </button>
+          </li>
+        </ul>
+        <div id="nav-spacer"></div>
+      </div>
+    </nav>
+    <div class="position-fixed bottom-0 end-0" id="scrollpos"></div>
 
     <!-- contact modal start -->
     <div
@@ -41,9 +108,9 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="contact-modal-label">
+            <h2 class="modal-title fs-5" id="contact-modal-label">
               New message
-            </h1>
+            </h2>
             <button
               type="button"
               class="btn-close"
@@ -107,89 +174,87 @@
     </div>
     <!-- contact modal end -->
 
-    <div class="mt-0 text-center" id="top-div">
+    <section class="mt-0 text-center" id="top-div">
       <h1>Hello there. I'm <span id="heading-name">Matthias</span>.</h1>
       <br />
       <p class="lead sub-heading">
         A web developer to craft
         <span class="heading-emphasize">your</span> digital experiences.
       </p>
-      <a href="#sectionabout" class="btn btn-light mt-4">Learn more</a>
-    </div>
-    <div class="container-fluid bg-transparent mt-0">
-      <div class="row gx-5 mt-0 py-5" id="sectionabout">
-        <div class="col-xl-3"></div>
-        <div class="col-xl-3 d-flex align-items-center">
-          <img
-            id="portrait"
-            src="assets/mj_self-removebg.png"
-            alt="Portrait of the web developer"
-          />
+      <a href="#about" class="btn btn-light mt-4">Learn more</a>
+    </section>
+
+    <section class="row gx-5 mt-0 py-5" id="about">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-3 d-flex align-items-center">
+        <img
+          id="portrait"
+          src="assets/mj_self-removebg.png"
+          alt="Portrait of the web developer"
+        />
+      </div>
+      <div class="col-xl-4 py-4 d-flex flex-column justify-content-center">
+        <h2 class="px-2 mb-4">about.</h2>
+        <p class="px-5">
+          Currently working as an IT project manager and low code developer, I'm
+          on a journey to transform my passion for web development into a
+          thriving career.
+        </p>
+        <p class="px-5">
+          With a strong interest in UX and UI design, I'm ready to explore the
+          endless possibilities of the digital world.
+        </p>
+        <p class="px-5 lead">Join me on this exciting adventure!</p>
+        <div class="ms-5 mt-3">
+          <a href="#mywork" class="btn btn-outline-light" id="btn-mywork">
+            Have a look at my work
+            <span class="material-symbols-rounded"> arrow_right_alt </span>
+          </a>
         </div>
-        <div class="col-xl-3 py-4 d-flex flex-column justify-content-center">
-          <h2 class="px-2 mb-4">about.</h2>
-          <p class="px-5">
-            Currently working as an IT project manager and low code developer,
-            I'm on a journey to transform my passion for web development into a
-            thriving career.
-          </p>
-          <p class="px-5">
-            With a strong interest in UX and UI design, I'm ready to explore the
-            endless possibilities of the digital world.
-          </p>
-          <p class="px-5 lead">Join me on this exciting adventure!</p>
-          <div class="ms-5 mt-3">
-            <button class="btn btn-outline-light" id="btn-mywork">
-              Have a look at my work
-              <span class="material-symbols-rounded"> arrow_right_alt </span>
-            </button>
+      </div>
+      <div class="col"></div>
+    </section>
+
+    <section id="mywork">
+      <div class="row gx-5 mt-0 py-5">
+        <div class="col-xl-3"></div>
+        <div class="col-xl-3 ms-3 d-flex align-items-center">
+          <h2 class="px-2 mb-4">my work.</h2>
+        </div>
+        <div class="col-xl-6"></div>
+      </div>
+    </section>
+
+    <section id="techstack">
+      <div class="row gx-5 mt-0 py-5">
+        <div class="col-xl-3"></div>
+        <div class="col-xl-3 ms-3"><h2 class="px-2 mb-4">tech stack.</h2></div>
+        <div class="col-xl-6"></div>
+      </div>
+
+      <div class="row gx-5 mt-0 py-5 fly-in" id="flyin">
+        <div class="col-xl-3"></div>
+        <div class="col-xl-6 ms-3">
+          <div class="d-flex justify-content-around" id="techstack-container">
+            <img src="assets/stack/html.png" />
+            <img src="assets/stack/css.png" />
+            <img src="assets/stack/js.png" />
+            <img src="assets/stack/nodejs.png" />
+            <img src="assets/stack/react.png" />
+            <img src="assets/stack/cs.png" />
+            <img src="assets/stack/java.png" />
+            <img src="assets/stack/sql.png" />
           </div>
         </div>
-        <div class="col"></div>
-      </div>
-      <!--
-      <div class="row gx-5 bg-transparent my-5">
         <div class="col-xl-3"></div>
-        <div class="col-xl-3 d-flex flex-column justify-content-center">
-          <h2 class="px-2 mb-4">facts.</h2>
-          <p class="px-5 lh-lg">
-            I own a boat license<br />
-            I love cooking but not preparing<br />
-            I'm a bit of a geek, obviously<br />
-            I'm totally into sunstainability<br />
-            Never satisfied with design - there's always room for improvement
-          </p>
-        </div>
-      </div>-->
-    </div>
-
-    <div class="row gx-5 mt-0 py-5">
-      <div class="col-xl-3"></div>
-      <div class="col-xl-3 ms-3"><h2 class="px-2 mb-4">Tech stack.</h2></div>
-      <div class="col-xl-6"></div>
-    </div>
-
-    <div class="row gx-5 mt-0 py-5">
-      <div class="col-xl-3"></div>
-      <div class="col-xl-6 ms-3">
-        <div class="d-flex justify-content-around" id="techstack">
-          <img src="assets/stack/html.png" />
-          <img src="assets/stack/css.png" />
-          <img src="assets/stack/js.png" />
-          <img src="assets/stack/nodejs.png" />
-          <img src="assets/stack/react.png" />
-          <img src="assets/stack/cs.png" />
-          <img src="assets/stack/java.png" />
-          <img src="assets/stack/sql.png" />
-        </div>
       </div>
-      <div class="col-xl-3"></div>
-    </div>
+    </section>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="js/scroll.js" type="module"></script>
   </body>
 </html>
