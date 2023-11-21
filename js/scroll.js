@@ -9,17 +9,21 @@ document.addEventListener("scroll", function () {
   let currentScrollPos = window.scrollY;
   let viewPortHeight = window.innerHeight;
 
-  scrollPosEl.textContent = currentScrollPos;
-
-  if (currentScrollPos <= viewPortHeight) {
+  scrollPosEl.textContent = sectionMyWork.scrollTop;
+sectionMyWork.is
+  if (currentScrollPos <= viewPortHeight - 100) {
     switchTheme("dark");
   } else {
-    if (currentScrollPos >= sectionMyWork.scrollTop) {
+    if (currentScrollPos > viewPortHeight - 100) {
       switchTheme("light");
     }
 
-    if (currentScrollPos > sectionTechStack.scrollTop) {
+    if (currentScrollPos > viewPortHeight*2 - 100) {
       switchTheme("dark");
+    }
+
+    if(currentScrollPos > viewPortHeight*3 - 100) {
+        switchTheme("light");
     }
   }
 });
