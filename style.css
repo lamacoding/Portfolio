@@ -8,13 +8,12 @@
 }
 
 :root {
-  --bs-text: white;
+  --bs-text: #D1D1C7;
   --bs-body: rgb(31, 28, 36);
 }
 
 body {
   font-family: "Cabinet Grotesk", sans-serif;
-  scroll-behavior: smooth;
   background-color: var(--bs-body);
   color: var(--bs-text);
   transition: background-color 1s, color 1s;
@@ -29,6 +28,7 @@ section {
 .nav-link {
   color: var(--bs-text);
 }
+
 .navbar-brand:hover,
 .navbar-brand:focus {
   color: var(--bs-text);
@@ -56,7 +56,7 @@ section {
   filter: brightness(90%);
 }
 
-nav: {
+nav {
   background-color: var(--bs-body);
   color: var(--bs-text);
   width: 100%;
@@ -66,12 +66,6 @@ nav: {
 
 #nav-spacer {
   width: 150px;
-}
-
-.nav-link:hover,
-.nav-link:focus,
-nav .show {
-  color: var(--bs-text) !important;
 }
 
 .navbar-brand {
@@ -106,24 +100,13 @@ nav .material-symbols-rounded {
 }
 
 #top-div {
-  background-image: url(assets/mj_top_main.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 1700px) {
-  #top-div {
-    background-image: none;
-    background-color: rgb(11, 15, 19) !important;
-    height: auto;
-    padding-bottom: 40px;
-  }
+  padding-top: 20vh;
 }
 
 h1 {
-  color: white;
+  color: var(--bs-text);
   font-weight: bold;
-  font-size: 4em;
+  font-size: 8vmax;
 }
 
 h2 {
@@ -132,16 +115,16 @@ h2 {
 }
 
 .sub-heading {
-  color: white;
-  font-size: 2em;
+  color: var(--bs-text);
+  font-size: 3vmax;
 }
 
-#heading-name {
-  background: rgb(199, 4, 157);
+#heading-name, .heading-name {
+  background: rgb(91, 5, 230);
   background: linear-gradient(
     129deg,
-    rgb(199, 4, 157) 0%,
-    rgba(0, 182, 180, 1) 100%
+    rgb(91, 5, 230) 0%,
+    rgb(2, 221, 217) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -149,14 +132,14 @@ h2 {
 }
 
 .heading-emphasize {
-  color: rgb(0, 182, 180);
+  color: rgb(2, 221, 217);
   font-weight: bold;
 }
 
 #portrait {
   width: 80%;
   margin: auto;
-  filter: drop-shadow(0px 0px 20px rgb(144, 74, 172));
+  filter: drop-shadow(0px 0px 20px rgb(144, 74, 172)) sepia(0.5);
   border-radius: 20px;
   animation: moveUpDown 4s infinite ease-in-out;
 }

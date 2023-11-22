@@ -1,29 +1,38 @@
-let scrollPosEl = document.getElementById("scrollpos");
 let btnMyWork = document.getElementById("btn-mywork");
 let btnContactMe = document.getElementById("btn-contactme");
 let htmlEl = document.getElementsByTagName("html")[0];
+
+//Sections
+let topDiv = document.getElementById("top-div");
+let sectionAbout = document.getElementById("about");
 let sectionMyWork = document.getElementById("mywork");
 let sectionTechStack = document.getElementById("techstack");
 
 document.addEventListener("scroll", function () {
   let currentScrollPos = window.scrollY;
-  let viewPortHeight = window.innerHeight;
 
-  scrollPosEl.textContent = sectionMyWork.scrollTop;
-sectionMyWork.is
-  if (currentScrollPos <= viewPortHeight - 100) {
+  if (currentScrollPos <= topDiv.clientHeight - 100) {
     switchTheme("dark");
   } else {
-    if (currentScrollPos > viewPortHeight - 100) {
+    if (currentScrollPos > topDiv.clientHeight - 100) {
       switchTheme("light");
     }
 
-    if (currentScrollPos > viewPortHeight*2 - 100) {
+    if (
+      currentScrollPos >
+      sectionAbout.clientHeight + topDiv.clientHeight - 100
+    ) {
       switchTheme("dark");
     }
 
-    if(currentScrollPos > viewPortHeight*3 - 100) {
-        switchTheme("light");
+    if (
+      currentScrollPos >
+      sectionMyWork.clientHeight +
+        sectionAbout.clientHeight +
+        topDiv.clientHeight -
+        100
+    ) {
+      switchTheme("light");
     }
   }
 });
@@ -31,10 +40,7 @@ sectionMyWork.is
 function switchTheme(theme) {
   if (theme === "light") {
     htmlEl.setAttribute("data-bs-theme", "light");
-    document.documentElement.style.setProperty(
-      "--bs-body",
-      "rgb(220, 220, 220)"
-    );
+    document.documentElement.style.setProperty("--bs-body", "#D1D1C7");
     document.documentElement.style.setProperty("--bs-text", "black");
     btnMyWork.classList.remove("btn-outline-light");
     btnMyWork.classList.add("btn-outline-dark");
@@ -43,7 +49,7 @@ function switchTheme(theme) {
   } else if (theme === "dark") {
     htmlEl.setAttribute("data-bs-theme", "dark");
     document.documentElement.style.setProperty("--bs-body", "rgb(31, 28, 36)");
-    document.documentElement.style.setProperty("--bs-text", "white");
+    document.documentElement.style.setProperty("--bs-text", "#D1D1C7");
     btnMyWork.classList.remove("btn-outline-dark");
     btnMyWork.classList.add("btn-outline-light");
     btnContactMe.classList.remove("btn-dark");
