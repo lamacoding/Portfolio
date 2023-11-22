@@ -8,7 +8,7 @@
 }
 
 :root {
-  --bs-text: #D1D1C7;
+  --bs-text: #d1d1c7;
   --bs-body: rgb(31, 28, 36);
 }
 
@@ -59,7 +59,6 @@ section {
 nav {
   background-color: var(--bs-body);
   color: var(--bs-text);
-  width: 100%;
   z-index: 1;
   transition: all 1s;
 }
@@ -70,6 +69,7 @@ nav {
 
 .navbar-brand {
   font-family: "Sometype Mono", monospace;
+  font-weight: bold;
 }
 
 nav .material-symbols-rounded {
@@ -99,10 +99,6 @@ nav .material-symbols-rounded {
   transition: all 0.4s;
 }
 
-#top-div {
-  padding-top: 20vh;
-}
-
 h1 {
   color: var(--bs-text);
   font-weight: bold;
@@ -119,7 +115,8 @@ h2 {
   font-size: 3vmax;
 }
 
-#heading-name, .heading-name {
+#heading-name,
+.heading-name {
   background: rgb(91, 5, 230);
   background: linear-gradient(
     129deg,
