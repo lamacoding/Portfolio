@@ -1,12 +1,13 @@
-let btnMyWork = document.getElementById("btn-mywork");
-let btnContactMe = document.getElementById("btn-contactme");
-let htmlEl = document.getElementsByTagName("html")[0];
+const btnMyWork = document.getElementById("btn-mywork");
+const btnContactMe = document.getElementById("btn-contactme");
+const btnSendMessage = document.getElementById("btn-submit-message");
+const htmlEl = document.getElementsByTagName("html")[0];
 
 //Sections
-let topDiv = document.getElementById("top-div");
-let sectionAbout = document.getElementById("about");
-let sectionMyWork = document.getElementById("mywork");
-let sectionTechStack = document.getElementById("techstack");
+const topDiv = document.getElementById("top-div");
+const sectionAbout = document.getElementById("about");
+const sectionMyWork = document.getElementById("mywork");
+const sectionTechStack = document.getElementById("techstack");
 
 document.addEventListener("scroll", function () {
   let currentScrollPos = window.scrollY;
@@ -44,6 +45,8 @@ function switchTheme(theme) {
     document.documentElement.style.setProperty("--bs-text", "black");
     btnMyWork.classList.remove("btn-outline-light");
     btnMyWork.classList.add("btn-outline-dark");
+    btnSendMessage.classList.remove("btn-light");
+    btnSendMessage.classList.add("btn-dark");
     btnContactMe.classList.remove("btn-light");
     btnContactMe.classList.add("btn-dark");
   } else if (theme === "dark") {
@@ -52,6 +55,8 @@ function switchTheme(theme) {
     document.documentElement.style.setProperty("--bs-text", "#D1D1C7");
     btnMyWork.classList.remove("btn-outline-dark");
     btnMyWork.classList.add("btn-outline-light");
+    btnSendMessage.classList.remove("btn-dark");
+    btnSendMessage.classList.add("btn-light");
     btnContactMe.classList.remove("btn-dark");
     btnContactMe.classList.add("btn-light");
   }

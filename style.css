@@ -38,24 +38,6 @@ section {
   transition: all 1s;
 }
 
-.btn-primary {
-  background-color: rgb(137, 4, 214);
-  border-color: rgb(137, 4, 214);
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: rgb(122, 1, 192) !important;
-  border-color: rgb(122, 1, 192) !important;
-}
-
-.btn-primary:active,
-.btn-primary:focus {
-  background-color: rgb(122, 1, 192);
-  border-color: rgb(122, 1, 192);
-  filter: brightness(90%);
-}
-
 nav {
   background-color: var(--bs-body);
   color: var(--bs-text);
@@ -174,7 +156,33 @@ h2 {
   font-size: 2em;
 }
 
+.card {
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  filter: grayscale();
+}
+
 .card img {
-  height: 100px;
-  width: 100px;
+  padding: 15px;
+}
+
+[data-bs-theme="light"] .card,
+[data-bs-theme="light"] .modal-content,
+[data-bs-theme="light"] input,
+[data-bs-theme="light"] textarea {
+  background-color: rgb(221, 221, 221);
+}
+
+[data-bs-theme="light"] input:focus,
+[data-bs-theme="light"] textarea:focus {
+  background-color: rgb(221, 221, 221);
+}
+
+[data-bs-theme="light"] input,
+[data-bs-theme="light"] textarea {
+  border-color: rgb(73, 73, 73);
 }
