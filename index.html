@@ -30,7 +30,9 @@
   </head>
 
   <body id="top">
-    <nav class="navbar navbar-expand-xl fixed-top mb-0">
+    
+    <!-- mobile navigation start -->
+    <nav class="navbar navbar-expand-xl fixed-top mb-0" id="mobile-nav">
       <a class="navbar-brand ms-4" href="index.html#top">
         <img
           src="assets/lama.png"
@@ -81,6 +83,26 @@
         <div id="nav-spacer"></div>
       </div>
     </nav>
+    <!-- mobile navigation end -->
+
+    <!-- desktop navigation start -->
+    <nav
+      class="position-fixed ms-5 p-4 d-flex flex-column justify-content-center h-100 gap-4" id="desktop-nav"
+    >
+      <div class="d-flex gap-2 align-items-center">
+        <a href="#top"><div class="rect-container" id="btn-1"></div><span>Start</span></a>
+      </div>
+      <div class="d-flex gap-2 align-items-center">
+        <a href="#about"><div class="rect-container" id="btn-2"></div><span>About</span></a>
+      </div>
+      <div class="d-flex gap-2 align-items-center">
+        <a href="#mywork"><div class="rect-container" id="btn-3"></div><span>My work</span></a>
+      </div>
+      <div class="d-flex gap-2 align-items-center">
+        <a href="#techstack"><div class="rect-container" id="btn-4"></div><span>Tech stack</span></a>
+      </div>
+    </nav>
+    <!-- desktop navigation end -->
 
     <!-- contact modal start -->
     <div
@@ -149,7 +171,11 @@
               >
                 Close
               </button>
-              <button type="submit" class="btn btn-light" id="btn-submit-message">
+              <button
+                type="submit"
+                class="btn btn-light"
+                id="btn-submit-message"
+              >
                 Send message
               </button>
             </div>
@@ -158,7 +184,11 @@
       </div>
     </div>
     <!-- contact modal end -->
+
     <div class="container-xl">
+      <div id="bg-1"></div>
+      <div id="bg-2"></div>
+      <div id="bg-3"></div>
       <section
         class="mt-0 d-flex flex-column justify-content-center align-items-center text-center"
         id="top-div"
@@ -166,8 +196,7 @@
         <h1>Hello there.<br /><span id="heading-name">I'm Matthias.</span></h1>
         <br />
         <p class="lead sub-heading">
-          A web developer to craft
-          <span class="heading-emphasize">your</span> digital experiences.
+          A full stack developer to craft your digital experiences.
         </p>
         <a href="#about" class="btn btn-light btn-lg mt-4" id="btn-learnmore"
           >Learn more</a
@@ -214,7 +243,7 @@
           <div class="col-xl-6"></div>
         </div>
 
-        <div class="row gx-4 justify-content-center ">
+        <div class="row gx-4 justify-content-center">
           <div class="card col-xl-4 m-4" style="width: 18rem">
             <div style="text-align: center">
               <img
@@ -267,58 +296,58 @@
           </div>
         </div>
 
-        <div class="row gx-4 justify-content-center ">
-            <div class="card col-xl-4 m-4" style="width: 18rem">
-              <div style="text-align: center">
-                <img
-                  src="assets/mj_top_main.jpg"
-                  class="card-img-top"
-                  alt="Lama Coding Logo"
-                />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">lama.coding</h5>
-                <p class="card-text">
-                  This site used to be the first site I ever created. This was
-                  quite a challenging task and took my skills on another level.
-                </p>
-              </div>
+        <div class="row gx-4 justify-content-center">
+          <div class="card col-xl-4 m-4" style="width: 18rem">
+            <div style="text-align: center">
+              <img
+                src="assets/mj_top_main.jpg"
+                class="card-img-top"
+                alt="Lama Coding Logo"
+              />
             </div>
-  
-            <div class="card col-xl-4 m-4" style="width: 18rem">
-              <div style="text-align: center">
-                <img
-                  src="assets/mj_self-removebg.png"
-                  class="card-img-top"
-                  alt="Lama Coding Logo"
-                />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">lama.coding</h5>
-                <p class="card-text">
-                  This site used to be the first site I ever created. This was
-                  quite a challenging task and took my skills on another level.
-                </p>
-              </div>
-            </div>
-  
-            <div class="card col-xl-4 m-4" style="width: 18rem">
-              <div style="text-align: center">
-                <img
-                  src="assets/mj_self-removebg.png"
-                  class="card-img-top"
-                  alt="Lama Coding Logo"
-                />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">lama.coding</h5>
-                <p class="card-text">
-                  This site used to be the first site I ever created. This was
-                  quite a challenging task and took my skills on another level.
-                </p>
-              </div>
+            <div class="card-body">
+              <h5 class="card-title">lama.coding</h5>
+              <p class="card-text">
+                This site used to be the first site I ever created. This was
+                quite a challenging task and took my skills on another level.
+              </p>
             </div>
           </div>
+
+          <div class="card col-xl-4 m-4" style="width: 18rem">
+            <div style="text-align: center">
+              <img
+                src="assets/mj_self-removebg.png"
+                class="card-img-top"
+                alt="Lama Coding Logo"
+              />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">lama.coding</h5>
+              <p class="card-text">
+                This site used to be the first site I ever created. This was
+                quite a challenging task and took my skills on another level.
+              </p>
+            </div>
+          </div>
+
+          <div class="card col-xl-4 m-4" style="width: 18rem">
+            <div style="text-align: center">
+              <img
+                src="assets/mj_self-removebg.png"
+                class="card-img-top"
+                alt="Lama Coding Logo"
+              />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">lama.coding</h5>
+              <p class="card-text">
+                This site used to be the first site I ever created. This was
+                quite a challenging task and took my skills on another level.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="techstack">

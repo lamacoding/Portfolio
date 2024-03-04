@@ -8,8 +8,8 @@
 }
 
 :root {
-  --bs-text: #d1d1c7;
-  --bs-body: rgb(31, 28, 36);
+  --bs-text: rgb(233, 233, 233);
+  --bs-body: #383e4e;
 }
 
 body {
@@ -38,8 +38,17 @@ section {
   transition: all 1s;
 }
 
-nav {
-  background-color: var(--bs-body);
+#mobile-nav {
+  background-color: transparent;
+  backdrop-filter: blur(12px);
+  color: var(--bs-text);
+  z-index: 1;
+  transition: all 1s;
+}
+
+#desktop-nav {
+  background-color: transparent;
+  backdrop-filter: blur(12px);
   color: var(--bs-text);
   z-index: 1;
   transition: all 1s;
@@ -84,12 +93,7 @@ nav .material-symbols-rounded {
 h1 {
   color: var(--bs-text);
   font-weight: bold;
-  font-size: 8vmax;
-  background-image: url(assets/header-bg.jpg);
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-attachment: fixed;
-  color: transparent;
+  font-size: 4vmax;
 }
 
 h2 {
@@ -99,24 +103,7 @@ h2 {
 
 .sub-heading {
   color: var(--bs-text);
-  font-size: 3vmax;
-}
-
-.heading-name {
-  background: rgb(91, 5, 230);
-  background: linear-gradient(
-    129deg,
-    rgb(91, 5, 230) 0%,
-    rgb(2, 221, 217) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.heading-emphasize {
-  color: rgb(2, 221, 217);
-  font-weight: bold;
+  font-size: 1.7vmax;
 }
 
 #portrait {
@@ -189,4 +176,99 @@ h2 {
 [data-bs-theme="light"] input,
 [data-bs-theme="light"] textarea {
   border-color: rgb(73, 73, 73);
+}
+
+.rect-container {
+  display: inline-block;
+  margin-right: 15px;
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--bs-text);
+  background-color: transparent;
+  padding: 5px;
+  transition: all 0.4s;
+}
+
+.rect-container.active {
+  background-color: var(--bs-text);
+}
+
+@media (max-width: 1426px) {
+  #mobile-nav {
+    display: flex;
+    visibility: visible;
+  }
+
+  #desktop-nav {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 1426px) {
+  #mobile-nav {
+    display: none;
+    visibility: hidden;
+  }
+
+  #desktop-nav {
+    display: flex;
+    visibility: visible;
+  }
+}
+
+#desktop-nav a {
+  color: var(--bs-text);
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+#bg-1 {
+  position: fixed;
+  background-color: rgb(96, 33, 155);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 50%;
+  height: 30%;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(150px);
+  border-radius: 50%;
+  transition: all 1s;
+}
+
+#bg-2 {
+  position: fixed;
+  background-color: rgba(190, 221, 17, 0.308);
+  top: 0;
+  left: 0;
+  transform: translateX(50%) translateY(50%);
+  z-index: -1;
+  width: 50%;
+  height: 30%;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(150px);
+  border-radius: 50%;
+  transition: all 1s;
+}
+
+#bg-3 {
+  position: fixed;
+  background-color: rgb(24, 97, 116);
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  z-index: -1;
+  width: 50%;
+  height: 30%;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(150px);
+  border-radius: 50%;
+  transition: all 1s;
 }
