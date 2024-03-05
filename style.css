@@ -235,49 +235,27 @@ h2 {
   text-decoration: none;
 }
 
-#bg-1 {
+#bg-1, #bg-2, #bg-3 {
   position: fixed;
-  background-color: rgb(96, 33, 155);
   top: 0;
   left: 0;
   z-index: -1;
   width: 50%;
   height: 30%;
-  object-fit: cover;
-  object-position: center;
   filter: blur(150px);
   border-radius: 50%;
-  transition: all 1s;
+}
+
+#bg-1 {
+  background-color: rgb(96, 33, 155);
 }
 
 #bg-2 {
-  position: fixed;
   background-color: rgba(190, 221, 17, 0.308);
-  top: 0;
-  left: 0;
   transform: translateX(50%) translateY(50%);
-  z-index: -1;
-  width: 50%;
-  height: 30%;
-  object-fit: cover;
-  object-position: center;
-  filter: blur(150px);
-  border-radius: 50%;
-  transition: all 1s;
 }
 
 #bg-3 {
-  position: fixed;
   background-color: rgb(24, 97, 116);
-  top: 0;
-  left: 0;
   transform: translateX(100%);
-  z-index: -1;
-  width: 50%;
-  height: 30%;
-  object-fit: cover;
-  object-position: center;
-  filter: blur(150px);
-  border-radius: 50%;
-  transition: all 1s;
 }
